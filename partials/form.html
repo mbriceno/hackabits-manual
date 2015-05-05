@@ -1,0 +1,9 @@
+		Nombre: <input type="text" ng-model="user.name"><br>
+		Correo: <input type="email" ng-model="user.email"><br>
+		Motivo de tu correo: 
+		<select ng-model="user.contact" >
+			<option ng-repeat="(k, v) in why" value="{{k}}">
+				{{v}}
+			</option>
+		</select>
+		<button type="submit">Enviar</button>

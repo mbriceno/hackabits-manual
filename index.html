@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+    	<meta name="author" content="">
+		
+		<title>4Geeks | Hack@Bits </title>
+		
+		<link href="" rel="icon" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link href="css/justified-nav.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="" id="wrapper" ng-controller="globalCtrl" >
+			<header class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3 logo">
+						<a href="#/init"><img src="images/logo4g.jpg"></a>
+					</div>
+				</div>
+				<nav>
+					<ul class="nav nav-justified">
+						<li ng-class="{ 'active' : menu.home}"><a href="#/init">Home</a></li>
+						<li ng-class="{ 'active' : menu.html}"><a href="#/html5">HTML/HTML5</a></li>
+						<li ng-class="{ 'active' : menu.css}"><a href="#/css3">CSS3</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="container content-page" ng-view></div>
+			<footer>
+				<div class="col-xs-12">Todos los derechos reservados. 4Geeks Mérida, 2015</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="js/libs/ui-bootstrap-tpls-0.12.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+	</body>
+</html>

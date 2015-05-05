@@ -1,0 +1,15 @@
+<accordion close-others="true">
+	<accordion-group heading="Elementos Basicos" is-open="true">
+		<ul class="nav nav-pills nav-stacked">
+			<li ng-repeat="item in collapseMenu" ng-class="{'active':item.active}">
+				<a href="" ng-click="scrollTo(item.link)"> {{ item.name }}</a>
+			</li>
+		</ul>
+	</accordion-group>
+	<accordion-group heading="Maquetacion" >
+      This content is straight in the template.
+	</accordion-group>
+	<accordion-group heading="Formularios" >
+      This content is straight in the template.
+	</accordion-group>
+</accordion>

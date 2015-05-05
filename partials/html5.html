@@ -1,0 +1,189 @@
+<div class="row template-content" ng-controller="htmlCtrl">
+	<div class="col-md-3 col-xs-3 col-sm-3">
+		<div class="index-menu" ng-include="'partials/menu.html'"></div>
+	</div>
+	<div class="col-md-9 col-xs-9 col-sm-9">
+		<div class="row" id="body">
+			<h1>¿Qué es HTML?</h1>
+			<p>
+				<strong>HTML</strong> es un lenguage de marcado que se utiliza para representar documentos Web. 
+    			<strong>HTML</strong> es la abreviación utilizada para <strong>Hyper Text Markup Language</strong> 
+    		</p>
+    		<p>
+    			Un lenguaje de marcado es un conjunto de marcas, etiquetas o tags. Así como en un
+    			documento Word podemos agregar formato (negritas, cursivas, anchos de marges) 
+    			en un documento <strong>HTML</strong> ese formato se lo expresamos con las etiquetas o marcas, 
+    			cada una de ellas describe un contenido diferente para el documento.
+    		</p>
+    		<p>
+    			Un documento <strong>HTML</strong> por lo general es leído por los navegadores Web y desplegado 
+    			al usuario. Los navegadores no muestran las etiquetas, solo muestan el formato que éstas le dan
+    			al documento.
+    		</p>
+    		<p>
+    			Todo documento <strong>HTML</strong> esta compuesto por una estructura básica que sirve 
+    			para que sea reconocido por los navegadores y debe ser respetada. Esta compuesta por:
+    			<ul>
+    				<li>Declaración de la versión del documento, <strong>DOCTYPE</strong>.</li>
+    				<li>Declaración del tipo de doucmento <strong>HTML</strong>.</li>
+    				<li>Cabecera <strong>HEADER</strong>.</li>
+    				<li>Cuerpo del documento <strong>BODY</strong>.</li>
+    			</ul>
+    		</p>
+    		<div class="content-tips">
+				<div class="tips-icon"></div>
+				<p>
+					Un navegador web solo mostrará al usuario el area del cuerpo del documento <strong>body</strong>.
+				</p>
+			</div>
+			<p>
+				<img src="images/estructura_html.png">
+			</p>
+		</div>
+		<div class="row" id="tags">
+			<h1>Elementos HTML</h1>
+			<p>Un documento HTML esta compuesto por <strong>elementos HTML</strong>, 
+				Un elemento esta compuesto por una etiqueta de inicio, 
+				una etiqueta de cierre y por el contenido del elemento entre ellas.<br><br>
+				Ejemplo:<br>
+			</p>
+			<div class="example-content">
+				<code>
+					<span><</span>p<span>></span> <--- Etiqueta de inicio<br>
+						Este es el contenido del elemento<br>
+					<span><</span><span>/</span>p<span>></span> <--- Etiqueta de cierre
+				</code>
+			</div>
+			<div class="content-tips">
+				<div class="tips-icon"></div>
+				<p>
+					Las etiquetas deben ser escritas en minusculas. La documentación de HTML no exige
+					la escritura de las etiquetas en minuscula, pero es recomendado para el caso de 
+					validaciones estrictas o documentos XHTML.
+				</p>
+			</div>
+			<h3>Elementos Anidados</h3>
+			<p>
+				Los elementos HTML pueden anidarse, es decir, un elemento puede contener
+				otros elementos. Los documentos HTML son una composición de elementos anidados.<br><br>
+				Ejemplo:<br>
+			</p>
+			<div class="example-content">
+				<code>
+					<span><</span>div<span>></span><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>p<span>></span><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alguna información relevante<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span><</span><span>/</span>p<span>></span><br>
+					<span><</span><span>/</span>div<span>></span>
+				</code>
+			</div>
+			<div class="content-tips">
+				<div class="tips-icon"></div>
+				<p>
+					Es importante que nunca olvides la <strong>etiqueta de cierre</strong> de los elementos que <strong>si la posean</strong>.
+					Esto ayuda a los navegadores a reconocer la estructura de tu documento.
+				</p>
+			</div>
+			<h3>Elementos vacíos</h3>
+			<p>
+				En HTML un elemento vacío se define como uno que no requiere contenido interno y por lo 
+				tanto no posee una etiqueta de cierre. Estos elementos por lo general se cierran con / al 
+				final de la etiqueta de inicio.<br><br>
+				Ejemplo:<br>
+			</p>
+			<div class="example-content">
+				<code>
+					Elemento para dejar una linea <span><</span>br<span>/</span><span>></span><br>
+				</code>
+			</div>
+			<div class="content-tips">
+				<div class="tips-icon"></div>
+				<p>
+					Si bien HTML5 no exige que se coloque la barra / para cerrar las etiquetas vacías, 
+					es recomendable que se coloque en el caso de que quieras pasar validadores de documentos XML
+				</p>
+			</div>
+		</div>
+		<div class="row" id="attributes">
+			<h1>Atributos</h1>
+			<p>Todos los elementos HTML contienen atributos, estos son empleados para agregar información adicional 
+				a los elementos. Los atributos son definidos dentro de la etiqueta de inicio de cada elemento HTML. 
+				Un atributo es un conjunto de clave/valor.<br><br>
+				Ejemplo: <br>
+			</p>
+			<div class="example-content">
+				<code>
+					<span><</span>div title="Un elemento HTML"<span>></span><br>
+				</code>
+			</div>
+			<div class="content-tips">
+				<div class="tips-icon"></div>
+				<p>
+					Recuerda escribir los atributos en minusculas, HTML no lo exige pero es una buena practica.
+				</p>
+			</div>
+			<p>Generalmente el valor de un atributo se escribe dentro de comillas. Utilizar comillas dobles o simples
+			queda a juicio del desarrollador y depende del caso en el que se utilicen. Un ejemplo particular del uso
+			de comillas simples o dobles, es cuando el valor del atributo tiene comillas:
+			</p>
+			<div class="example-content">
+				<code>
+					<span><</span>div title="Me dicen 'Tag' o  'Marca'"<span>></span><span><</span>/div<span>></span><br>
+					<span><</span>div title='Me dicen "Tag" o  "Marca"'<span>></span><span><</span>/div<span>></span><br>
+				</code>
+			</div>
+			<h3>Atributos relevantes</h3>
+			<p>
+				<ul>
+					<li><strong>id</strong>: Este atributo se utiliza como identificador unico de un elemento, siempre debe 
+						estar presente en el caso de utilizar un validador de documentos HTML/XHTML.
+					</li>
+					<li><strong>title</strong>: Se utiliza para especificar el contenido de una sección como un tooltip. Se 
+						activa al mantener el cursor del ratón sobre el elemento.
+					</li>
+					<li><strong>alt</strong>: Se utiliza para especificar un texto en el caso de que el elemento HTML 
+						no pueda mostrarse.
+					</li>
+					<li><strong>lang</strong>: Declara el lenguaje a ser utilizado en un documento HTML. Se utiliza en 
+					el elemento de apertura <strong><span><</span>html<span>></span></strong>.
+					</li>
+				</ul>
+			</p>
+			<div class="pro-tips">
+				<div class="pro-icon"></div>
+				<p>
+					Es importante especificar el atributo <strong>lang</strong> en todo documento HTML, ya que 
+					ayuda a regionalizar tu Web en los buscadores.
+				</p>
+			</div>
+		</div>
+		<div class="row" id="doctype">
+			<h1><span><</span>!DOCTYPE<span>></span></h1>
+			<p>
+				Esta declaración es utilizada para ayudar a los navegadores a mostrar correctamente el documento
+				<strong>HTML</strong> a los usuario. Actualmente hay varias versiones de documentos 
+				<strong>HTML</strong> por lo tanto hay que informar al navegador que tipo y versión utiliza 
+				el documento que queremos mostrar.
+			</p>
+			<h3>Tipo de declaraciones</h3>
+			<p>Actualmente podemos especificar 3 tipo de declaraciones para que un documento <strong>HTML</strong>
+			sea reconocido.<br><br>
+			Ejemplo: <br>
+			</p>
+			<div class="example-content">
+				<h5>HTML5</h5>
+				<code>
+					<span><</span>!DOCTYPE html<span>></span>
+				</code>
+				<h5>HTML 4.0</h5>
+				<code>
+					<span><</span>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"<span>></span>
+				</code>
+				<h5>XHTML 1.0</h5>
+				<code>
+					<span><</span>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"<span>></span>
+				</code>
+			</div>
+		</div>
+	</div>
+</div>

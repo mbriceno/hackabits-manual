@@ -1,0 +1,83 @@
+/* Put your CSS here */
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+.content-page{
+	padding-bottom:100px;
+}
+
+.template-content{
+	margin-top: 10px;
+}
+
+.index-menu{
+	position: fixed;
+	padding-left: 0px;
+	width: 20%;
+}
+
+.example-content{
+	border: 1px solid #cdcdcd;
+	padding: 20px;
+	background: #f6f6f6;
+	margin-bottom: 10px;
+}
+
+.content-tips, .pro-tips{
+	border: 2px solid #bce8f1;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.pro-tips{
+	border: 2px solid #80D25E;
+}
+
+.tips-icon, .pro-icon{
+	width: 40px;
+	height: 33px;
+	background: url(../images/tips1.jpg);
+	position: absolute;
+	z-index: 1;
+	margin-top: -40px;
+	margin-left: -10px;
+}
+
+.pro-icon{
+	height: 32px;
+	background: url(../images/pro-tips1.jpg);
+}
+
+.ember-application {
+    margin: 20px;
+}
+
+.logo{}
+
+.logo img{
+	width: 100%;
+}
+
+footer{
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background: #d5d5d5;
+	text-align: center;
+}
+
+footer div{
+	margin-top: 20px;
+}
